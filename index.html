@@ -36,8 +36,8 @@ footer{margin-top:40px;color:var(--mu);font-size:.9rem}
   <p>Profesional en Administración Financiera con más de 5 años de experiencia en análisis financiero, gestión de cartera y bases de datos. Me formé como Analista de Datos (Python, SQL y visualización) y busco un rol donde pueda convertir datos en decisiones de negocio.</p>
   <div class="links">
     <a href="mailto:johans05@outlook.com">Correo</a>
-    <a href="https://www.linkedin.com/in/johanvaron target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/johanvaron target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/TU-USUARIO-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">GitHub</a>
   </div>
 </header>
 
@@ -45,30 +45,33 @@ footer{margin-top:40px;color:var(--mu);font-size:.9rem}
 <p class="mu">Una selección pequeña, con el problema, mi contribución, las decisiones que tomé y las evidencias.</p>
 
 <details open>
-<summary>1. Análisis de cartera vencida y recaudo <span class="st">· En construcción</span></summary>
-<h3>Contexto o problema</h3><p>En mi trabajo analizo recaudo y cartera vencida en el sector energético. Como no puedo compartir datos reales, este proyecto usa datos públicos o simulados para responder: ¿qué factores se asocian con la mora y cómo priorizar la gestión de cobro?</p>
-<h3>Mi contribución</h3><p>Proyecto individual: diseño de la pregunta, consultas SQL, análisis en Python y dashboard.</p>
-<h3>Proceso y decisiones</h3><p class="todo">Completa cuando avances: por qué elegiste ciertas métricas (p. ej., tasa de mora por segmento), cómo limpiaste los datos y qué cambiaste después de explorarlos.</p>
-<h3>Resultado o aprendizaje</h3><p class="todo">Escribe solo hallazgos que puedas respaldar con tus datos. No inventes cifras.</p>
-<h3>Evidencias</h3><p><a href="proyectos/cartera-recaudo/">README del proyecto</a> · Notebook · Dashboard</p>
+<summary>1. RappiPlus: calidad y limpieza de datos con Python</summary>
+<h3>Contexto o problema</h3><p>Antes de analizar la rentabilidad del servicio RappiPlus había que saber si los datos eran confiables. Trabajé con tres fuentes: pedidos (25,100 filas), catálogo de productos y gasto de marketing.</p>
+<h3>Mi contribución</h3><p>Trabajo individual: diagnóstico, limpieza, validación y documentación de cada decisión.</p>
+<h3>Proceso y decisiones</h3><p>Cuantifiqué los problemas antes de limpiar: 100 pedidos duplicados, países y categorías escritos de forma inconsistente, nulos y cantidades imposibles. No inventé valores numéricos: marqué las filas dudosas con una bandera para excluirlas de los indicadores financieros, y recuperé datos faltantes solo cuando existían en otra columna.</p>
+<h3>Resultado o aprendizaje</h3><p>Dejé 25,000 pedidos únicos listos para el análisis. Aprendí que los errores de formato no generan errores de código, pero sí cifras de negocio incorrectas.</p>
+<h3>Evidencias</h3><p><a href="proyectos/rappiplus-limpieza-datos/">README del proyecto</a> · <a href="proyectos/rappiplus-limpieza-datos/rappiplus_cleaning.ipynb">Notebook</a></p>
+<p class="mu">Herramientas: Python, pandas, numpy.</p>
 </details>
 
 <details>
-<summary>2. Proyecto de SQL del bootcamp <span class="st">· «nombre del proyecto»</span></summary>
-<h3>Contexto o problema</h3><p class="todo">¿Qué base de datos relacional usaste y qué preguntas de negocio respondiste?</p>
-<h3>Mi contribución</h3><p class="todo">Qué consultas escribiste tú (joins, agregaciones, subconsultas).</p>
-<h3>Proceso y decisiones</h3><p class="todo">Por qué estructuraste las consultas así y qué validaste.</p>
-<h3>Resultado o aprendizaje</h3><p class="todo">Hallazgos principales y qué aprendiste.</p>
-<h3>Evidencias</h3><p><a href="proyectos/proyecto-sql/">README del proyecto</a> · Archivo .sql</p>
+<summary>2. RappiPlus: dashboard ejecutivo en Power BI</summary>
+<h3>Contexto o problema</h3><p>Con los datos limpios, el dashboard responde si el negocio es rentable, qué productos aportan más y cómo evolucionan ingresos y utilidad.</p>
+<h3>Mi contribución</h3><p>Trabajo individual: modelo de datos, medidas y diseño del reporte.</p>
+<h3>Proceso y decisiones</h3><p>Dos páginas: una vista ejecutiva (Revenue, Profit Neto, gasto de marketing, ticket promedio, evolución mensual y por producto) y una vista de detalle de producto con filtros por categoría, país, dispositivo y mes.</p>
+<h3>Resultado o aprendizaje</h3><p class="todo">Escribe aquí 2–3 hallazgos reales del dashboard. No inventes cifras.</p>
+<h3>Evidencias</h3><p><a href="proyectos/rappiplus-dashboard-powerbi/">README del proyecto</a> · Capturas del dashboard</p>
+<p class="mu">Herramientas: Power BI (modelo de datos, medidas DAX, segmentadores).</p>
 </details>
 
 <details>
-<summary>3. Proyecto de Python / visualización del bootcamp <span class="st">· «nombre del proyecto»</span></summary>
-<h3>Contexto o problema</h3><p class="todo">¿Qué pregunta analizaste y con qué fuente de datos?</p>
-<h3>Mi contribución</h3><p class="todo">Limpieza, análisis exploratorio, pruebas estadísticas o gráficos que hiciste.</p>
-<h3>Proceso y decisiones</h3><p class="todo">Cómo trataste valores ausentes o atípicos y por qué elegiste ese enfoque.</p>
-<h3>Resultado o aprendizaje</h3><p class="todo">Conclusiones para el negocio y qué mejorarías.</p>
-<h3>Evidencias</h3><p><a href="proyectos/proyecto-python/">README del proyecto</a> · Notebook</p>
+<summary>3. Facturación y recaudo, sector energético</summary>
+<h3>Contexto o problema</h3><p>Cada mes se factura y llegan recaudos asociados. La pregunta es cuánto de lo facturado se recauda y qué queda pendiente. Cruzo el reporte de facturación con el de recaudos de un municipio.</p>
+<h3>Mi contribución</h3><p>Preparación, validación y cruce de las dos bases por número de factura.</p>
+<h3>Proceso y decisiones</h3><p>En la exploración detecté que los recaudos incluyen facturas de varios meses, por lo que no se pueden comparar directamente con lo facturado en un solo mes. También identifiqué números de factura repetidos y valores negativos para revisar.</p>
+<h3>Resultado o aprendizaje</h3><p class="todo">Escribe aquí los hallazgos finales que puedas respaldar.</p>
+<h3>Evidencias</h3><p><a href="proyectos/ap-ciudad-bolivar-facturacion-recaudo/">README del proyecto</a></p>
+<p class="mu">Los datos originales no se publican porque contienen información personal. Herramientas: Excel, Python, SQL.</p>
 </details>
 
 <h2>Habilidades</h2>
