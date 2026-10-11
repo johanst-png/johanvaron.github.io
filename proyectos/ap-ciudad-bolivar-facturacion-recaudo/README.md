@@ -2,6 +2,14 @@
 
 > Análisis que cruza la facturación del mes con los recaudos recibidos, para medir el recaudo y hacer seguimiento de cartera en el sector energético.
 
+## Resumen
+**Facturación y recaudo | Excel + Python/SQL.** Crucé el reporte de facturación de un mes con los recaudos recibidos para medir qué parte de lo facturado se recauda. Encontré que los recaudos incluyen facturas de varios meses, que el recaudo difiere mucho entre ciclos de facturación y que hay facturas repetidas y recaudos negativos por revisar.
+
+## ⚠️ Antes de publicar este proyecto
+Los archivos originales contienen **datos personales reales** (nombres, números de identificación y direcciones) de usuarios del servicio. **No subas los Excel a GitHub.** En Colombia, la Ley 1581 de 2012 (protección de datos personales) aplica, y además son datos de tu empleador.
+- Deja los archivos fuera del repositorio (el `.gitignore` de esta carpeta ya excluye `*.xlsx` y `*.csv`).
+- Si quieres mostrar el trabajo, usa una versión **anonimizada**: elimina `DIRECCION`, `SUJETO_PASIVO_PDTO_DEP` e `IDENTIFICACION_SUJETO`, y reemplaza `SUSCRIPCION` y `NRO_FACTURA` por códigos.
+- Pide autorización a tu empresa antes de compartir cifras reales.
 
 ## Contexto o problema
 Cada mes se genera la facturación y llegan los recaudos asociados. La pregunta es **¿cuánto de lo facturado se recaudó y qué parte queda pendiente?** Este proyecto une dos reportes: el de facturación y el de recaudos de Ciudad Bolívar (departamento 5, municipio 101), servicio "Energía mercado regulado".
@@ -34,7 +42,10 @@ Llave de unión: `NRO_FACTURA`. Las dos bases no tienen valores vacíos.
 - Qué segmentos comparaste (categoría, subcategoría, ciclo).
 
 ## Resultado o aprendizaje
-A mediados de septiembre se había recaudado cerca del 28% del valor facturado en agosto, con diferencias grandes entre ciclos: el ciclo 112 lidera con cerca del 38% y los ciclos 118 y 119 están por debajo del 10%. La mayor parte del recaudo del archivo corresponde a facturas de meses anteriores, por lo que comparar el recaudo total con lo facturado en un solo mes da una imagen engañosa. Aprendí que primero hay que definir la regla de medición (por período de factura o por fecha de pago) antes de calcular el indicador. Siguiente paso: revisar los números de factura repetidos y los recaudos negativos, y priorizar el seguimiento de cobro en los ciclos de menor recaudo.
+<!-- Escribe aquí los hallazgos que puedas respaldar con las bases. No inventes métricas. -->
+
+## Implicación de negocio
+El seguimiento de cobro puede priorizarse en los ciclos con menor recaudo, y antes de reportar el indicador hay que definir si se mide por período de factura o por fecha de pago. Revisar los duplicados y reversos evita sobreestimar o subestimar el recaudo.
 
 ## Evidencias
 Capturas del análisis y de tablas **sin datos personales**, en la carpeta `img/`. Notebook o libro de Excel con datos anonimizados.

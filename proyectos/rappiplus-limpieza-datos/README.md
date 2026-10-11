@@ -2,6 +2,9 @@
 
 > Paso 1 de un proyecto de análisis de negocio: decidir si los datos son confiables antes de calcular cualquier métrica.
 
+## Resumen
+**RappiPlus: calidad y limpieza de datos | Python + pandas.** Evalué la calidad de tres fuentes (pedidos, catálogo y marketing) antes de calcular métricas de negocio. Detecté y traté duplicados, inconsistencias de texto, nulos y cantidades imposibles, documentando cada decisión y marcando los datos dudosos en lugar de inventarlos. Resultado: 25,000 pedidos únicos listos para el análisis de rentabilidad.
+
 ## Contexto o problema
 El proyecto evalúa el desempeño del servicio RappiPlus para apoyar decisiones de negocio. Antes de analizar rentabilidad, conversión o retención, había que responder una pregunta previa: **¿podemos confiar en los datos?** Este notebook cubre esa primera etapa con tres fuentes:
 
@@ -33,6 +36,9 @@ Un criterio que apliqué: **no imputar valores numéricos inventados**. En su lu
 - `orders_clean`: 25,000 pedidos únicos (20 columnas), sin nulos en las columnas de identidad y categóricas.
 - `catalog_clean` (7 filas) y `marketing_clean` (1,620 filas) listos para el siguiente paso.
 - Aprendí que los errores de formato (mayúsculas, tildes) no dan error, pero generan cifras de negocio incorrectas, y que conviene marcar un dato dudoso en lugar de corregirlo a ciegas.
+
+## Implicación de negocio
+Sin esta validación, los indicadores de rentabilidad habrían incluido pedidos duplicados y montos imposibles. La bandera `incluir_en_kpis_financieros` permite excluir esas filas del análisis y le muestra al negocio qué datos conviene corregir en su origen.
 
 ## Evidencias
 - Notebook: [`rappiplus_cleaning.ipynb`](rappiplus_cleaning.ipynb)
