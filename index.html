@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Johan Varón | Portafolio de Análisis de Datos</title>
-<meta name="description" content="Portafolio de Johan Steven Varón Tapias: análisis de datos con SQL y Python, con experiencia en finanzas, crédito y sector energético.">
+<meta name="description" content="Portafolio de Johan Steven Varón Tapias: análisis de datos con SQL, Python y Power BI, con experiencia en finanzas, crédito y sector energético.">
 <style>
 :root{--bg:#f7f8fa;--card:#fff;--tx:#1c2430;--mu:#5b6677;--ac:#0b6e6e;--bd:#e1e5ea}
 @media(prefers-color-scheme:dark){:root{--bg:#10151c;--card:#18202a;--tx:#e8edf3;--mu:#9aa6b6;--ac:#4fc3c3;--bd:#2a3441}}
@@ -23,8 +23,6 @@ details{background:var(--card);border:1px solid var(--bd);border-radius:10px;pad
 summary{cursor:pointer;font-weight:600;font-size:1.05rem}
 details h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ac);margin:14px 0 2px}
 details p{margin:0}
-.todo{color:var(--mu);font-style:italic}
-.st{font-size:.8rem;font-weight:400;color:var(--mu)}
 footer{margin-top:40px;color:var(--mu);font-size:.9rem}
 </style>
 </head>
@@ -33,11 +31,11 @@ footer{margin-top:40px;color:var(--mu);font-size:.9rem}
 <header>
   <h1>Johan Steven Varón Tapias</h1>
   <p class="role">Analista de Datos | Finanzas · Crédito · Sector energético</p>
-  <p>Profesional en Administración Financiera con más de 5 años de experiencia en análisis financiero, gestión de cartera y bases de datos. Me formé como Analista de Datos (Python, SQL y visualización) y busco un rol donde pueda convertir datos en decisiones de negocio.</p>
+  <p>Profesional en Administración Financiera con más de 5 años de experiencia en análisis financiero, gestión de cartera y bases de datos. Me formé como Analista de Datos (Python, SQL y Power BI) y busco un rol donde pueda convertir datos en decisiones de negocio.</p>
   <div class="links">
     <a href="mailto:johans05@outlook.com">Correo</a>
-    <a href="https://www.linkedin.com/in/TU-USUARIO-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/johanvaron" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/johanst-png" target="_blank" rel="noopener">GitHub</a>
   </div>
 </header>
 
@@ -46,43 +44,49 @@ footer{margin-top:40px;color:var(--mu);font-size:.9rem}
 
 <details open>
 <summary>1. RappiPlus: calidad y limpieza de datos con Python</summary>
+<p><strong>Resumen:</strong> Evalué la calidad de tres fuentes (pedidos, catálogo y marketing) antes de calcular métricas de negocio, documentando cada decisión y marcando los datos dudosos en lugar de inventarlos.</p>
 <h3>Contexto o problema</h3><p>Antes de analizar la rentabilidad del servicio RappiPlus había que saber si los datos eran confiables. Trabajé con tres fuentes: pedidos (25,100 filas), catálogo de productos y gasto de marketing.</p>
 <h3>Mi contribución</h3><p>Trabajo individual: diagnóstico, limpieza, validación y documentación de cada decisión.</p>
 <h3>Proceso y decisiones</h3><p>Cuantifiqué los problemas antes de limpiar: 100 pedidos duplicados, países y categorías escritos de forma inconsistente, nulos y cantidades imposibles. No inventé valores numéricos: marqué las filas dudosas con una bandera para excluirlas de los indicadores financieros, y recuperé datos faltantes solo cuando existían en otra columna.</p>
 <h3>Resultado o aprendizaje</h3><p>Dejé 25,000 pedidos únicos listos para el análisis. Aprendí que los errores de formato no generan errores de código, pero sí cifras de negocio incorrectas.</p>
+<h3>Implicación de negocio</h3><p>Sin esta validación, los indicadores de rentabilidad habrían incluido pedidos duplicados y montos imposibles. La bandera permite excluir esas filas y muestra qué datos conviene corregir en su origen.</p>
 <h3>Evidencias</h3><p><a href="proyectos/rappiplus-limpieza-datos/">README del proyecto</a> · <a href="proyectos/rappiplus-limpieza-datos/rappiplus_cleaning.ipynb">Notebook</a></p>
 <p class="mu">Herramientas: Python, pandas, numpy.</p>
 </details>
 
 <details>
 <summary>2. RappiPlus: dashboard ejecutivo en Power BI</summary>
+<p><strong>Resumen:</strong> Construí un reporte de dos páginas con ingresos, utilidad, gasto de marketing y ticket promedio, su evolución mensual y el detalle por producto. Encontré que algunos productos de alto volumen dejan poca utilidad y que uno se vende a pérdida.</p>
 <h3>Contexto o problema</h3><p>Con los datos limpios, el dashboard responde si el negocio es rentable, qué productos aportan más y cómo evolucionan ingresos y utilidad.</p>
 <h3>Mi contribución</h3><p>Trabajo individual: modelo de datos, medidas y diseño del reporte.</p>
 <h3>Proceso y decisiones</h3><p>Dos páginas: una vista ejecutiva (Revenue, Profit Neto, gasto de marketing, ticket promedio, evolución mensual y por producto) y una vista de detalle de producto con filtros por categoría, país, dispositivo y mes.</p>
-<h3>Resultado o aprendizaje</h3><p class="todo">Entre enero y junio de 2025, 9.64 millones de revenue y 2.94 millones de Profit Neto. Vender más unidades no significa ganar más: Blender-XL-Red y Jacket-Winter-M venden tanto como Vacuum-Pro-Black pero dejan mucha menos utilidad, y Laptop-Gaming-16GB tiene profit bruto negativo.</p>
-<h3>Evidencias</h3><p><a href="proyectos/rappiplus-dashboard-powerbi/">README del proyecto</a> · Capturas del dashboard</p>
+<h3>Resultado o aprendizaje</h3><p>Entre enero y junio de 2025, 9.64 millones de revenue y 2.94 millones de Profit Neto. Vender más unidades no significa ganar más: Blender-XL-Red y Jacket-Winter-M venden tanto como Vacuum-Pro-Black pero dejan mucha menos utilidad, y Laptop-Gaming-16GB tiene profit bruto negativo.</p>
+<h3>Implicación de negocio</h3><p>Se podría revisar el precio y el costo de Laptop-Gaming-16GB, evaluar el margen de los productos que venden mucho y dejan poca utilidad, y priorizar el gasto de marketing en los productos de mayor margen.</p>
+<h3>Evidencias</h3><p><a href="proyectos/rappiplus-dashboard-powerbi/">README del proyecto</a></p>
 <p class="mu">Herramientas: Power BI (modelo de datos, medidas DAX, segmentadores).</p>
 </details>
 
 <details>
 <summary>3. Facturación y recaudo, sector energético</summary>
+<p><strong>Resumen:</strong> Crucé el reporte de facturación de un mes con los recaudos recibidos para medir qué parte de lo facturado se recauda. Encontré que el recaudo varía mucho entre ciclos de facturación y que los recaudos incluyen facturas de varios meses.</p>
 <h3>Contexto o problema</h3><p>Cada mes se factura y llegan recaudos asociados. La pregunta es cuánto de lo facturado se recauda y qué queda pendiente. Cruzo el reporte de facturación con el de recaudos de un municipio.</p>
 <h3>Mi contribución</h3><p>Preparación, validación y cruce de las dos bases por número de factura.</p>
-<h3>Proceso y decisiones</h3><p>En la exploración detecté que los recaudos incluyen facturas de varios meses, por lo que no se pueden comparar directamente con lo facturado en un solo mes. También identifiqué números de factura repetidos y valores negativos para revisar.</p>
-<h3>Resultado o aprendizaje</h3><p class="todo">Escribe aquí los hallazgos finales que puedas respaldar.</p>
+<h3>Proceso y decisiones</h3><p>En la exploración detecté que los recaudos incluyen facturas de varios meses, por lo que no se pueden comparar directamente con lo facturado en un solo mes. Por eso medí el recaudo asociado a las facturas del mes analizado. También identifiqué números de factura repetidos y valores negativos para revisar antes de dar cifras finales.</p>
+<h3>Resultado o aprendizaje</h3><p>Con un corte de mediados de septiembre, se había recaudado cerca del 28% del valor facturado en agosto, con diferencias grandes entre ciclos: el ciclo 112, el más grande, recauda cerca del 38%, mientras los ciclos 118 y 119 están por debajo del 10%. Más de la mitad del recaudo del archivo corresponde a facturas de meses anteriores. Aprendí que primero hay que definir la regla de medición antes de calcular el indicador.</p>
+<h3>Implicación de negocio</h3><p>El seguimiento de cobro puede priorizarse en los ciclos con menor recaudo. Antes de reportar el indicador hay que definir si se mide por período de factura o por fecha de pago, y revisar duplicados y reversos para no sobreestimar ni subestimar el recaudo.</p>
 <h3>Evidencias</h3><p><a href="proyectos/ap-ciudad-bolivar-facturacion-recaudo/">README del proyecto</a></p>
-<p class="mu">Los datos originales no se publican porque contienen información personal. Herramientas: Excel, Python, SQL.</p>
+<p class="mu">Los datos originales no se publican porque contienen información personal. Herramientas: Excel y Python.</p>
 </details>
 
 <h2>Habilidades</h2>
-<div class="tags"><span>SQL</span><span>Python</span><span>pandas</span><span>Excel avanzado</span><span>Tablas dinámicas</span><span>Visualización de datos</span><span>Análisis estadístico</span><span>Análisis de crédito y cartera</span><span>Informes de recaudo</span><span>Plataforma SUI</span></div>
+<div class="tags"><span>SQL</span><span>Python</span><span>pandas</span><span>Power BI</span><span>DAX</span><span>Excel avanzado</span><span>Tablas dinámicas</span><span>Visualización de datos</span><span>Limpieza de datos</span><span>Análisis de crédito y cartera</span><span>Informes de recaudo</span><span>Plataforma SUI</span></div>
 
 <h2>Experiencia</h2>
 <p><strong>Analista Comercial</strong>, Canales y Contactos S.A. <span class="mu">(abr. 2024 – actualidad)</span><br>Bases de datos de recaudo, análisis de consumo energético, informes de cartera y seguimiento de cobro.</p>
 <p><strong>Analista de Operaciones Financieras de Crédito</strong>, BBVA <span class="mu">(oct. 2022 – abr. 2024)</span><br>Evaluación de solicitudes de crédito e informes financieros para la alta dirección.</p>
 <p><strong>Formación:</strong> Administración Financiera (Universidad del Tolima) · Analista de Datos (TripleTen, 2024).</p>
 
-<footer>Contacto: johans05@outlook.com · +57 310 800 1723 · Cali, Colombia</footer>
+<footer>Contacto: johans05@outlook.com · Cali, Colombia</footer>
 </main>
 </body>
 </html>
